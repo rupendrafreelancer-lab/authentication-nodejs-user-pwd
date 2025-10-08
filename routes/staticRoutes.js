@@ -22,4 +22,8 @@ staticRouter.get("/signin", (req, res) => {
   });
 });
 
+staticRouter.get("/signout", (req, res) => {
+  res.redirect("/");
+});
+
 module.exports = staticRouter;
