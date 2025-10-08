@@ -11,6 +11,10 @@ const urlRoute = require("./routes/urlRoute");
 const PORT = 8000;
 const app = express();
 
+// Define gloabl variables using app.locals
+app.locals.appName = "Authentication";
+app.locals.footerText = "Copyright 2025";
+
 // Configuration for views
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));

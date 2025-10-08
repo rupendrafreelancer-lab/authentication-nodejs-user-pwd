@@ -7,10 +7,7 @@ const UserSignup = async (req, res) => {
 
   await UserModel.create({ name, email, password });
 
-  return res.render("home", {
-    pageTitle: "Home Page",
-    withSignup: true,
-  });
+  return res.render("home");
 };
 
 const UserSignin = async (req, res) => {
@@ -20,7 +17,6 @@ const UserSignin = async (req, res) => {
 
   if (!user) {
     return res.render("signin", {
-      pageTitle: "Login Page",
       error: "Invalid Username or Password",
     });
   }

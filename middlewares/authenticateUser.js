@@ -14,8 +14,14 @@ async function authenticateUser(req, res, next) {
 
 async function checkAuthenticationOnly(req, res, next) {
   const sessionId = req.cookies?.uid;
+  let isAuthenticated = true;
 
   const user = getUser(sessionId);
+
+  if (!user) isAuthenticated = false;
+
+  res.locals.isAuthenticated = isAuthenticated;
+  res.locals.user = user;
 
   req.user = user;
   next();

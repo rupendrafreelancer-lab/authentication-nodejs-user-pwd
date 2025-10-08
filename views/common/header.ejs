@@ -2,11 +2,16 @@
   <h1>Logo</h1>
   <ul>
     <li><a href="/">Home</a></li>
-    <li><a href="/shorten_url">Created Shorten Url</a></li>
+    <% if (!isAuthenticated) { %>
     <li><a href="/signup">Sign Up</a></li>
     <li><a href="/signin">SignIn</a></li>
+    <% } else { %>
+    <li><p><%- user.name %></p></li>
+    <li><a href="/signout">Signout</a></li>
+    <% } %>
   </ul>
 </nav>
+<hr />
 <style>
   nav {
     display: flex;
