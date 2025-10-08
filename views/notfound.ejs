@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <%- include('common/head') %>
+  <body>
+    <%- include('common/header') %>
+    <main>
+      <h2>Not Found</h2>
+      <% if(error){ %>
+      <p><%- error %></p>
+      <% } %>
+    </main>
+    <%- include('common/footer') %>
+  </body>
+</html>

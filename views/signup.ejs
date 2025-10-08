@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <%- include('common/head') %>
+  <body>
+    <%- include('common/header') %>
+    <main>
+      <h2>Sign Up Page</h2>
+      <form method="POST" action="/user">
+        <label for="name">
+          <span>Name</span><br />
+          <input id="name" type="text" name="name" placeholder="Name" />
+        </label>
+        <label for="name">
+          <span>Email</span><br />
+          <input id="email" type="text" name="email" placeholder="Email" />
+        </label>
+        <label for="name">
+          <span>Password</span><br />
+          <input id="Password" type="password" name="password" placeholder="Password" />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <%- include('common/footer') %>
+  </body>
+</html>
